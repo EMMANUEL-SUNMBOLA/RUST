@@ -1,5 +1,6 @@
 # RUST
 
+### Variables
 
 ```RUST
     Let Age = "6";
