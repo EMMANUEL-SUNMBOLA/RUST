@@ -6,16 +6,17 @@ fn main() {
     let secret = rand::thread_rng().gen_range(1..=100);
     
     println!("The secret number is : {secret}");
-    // println!("Input your guess");
-    let mut guess = String::new();
-
+    
     loop{
+        let mut guess = String::new();
+        
+        println!("Input your guess");
 
         io::stdin()
         .read_line(&mut guess)
         .expect("failed to read line");
     
-        let mut guess: u32 = guess.trim().parse(){
+        let guess: u32 = match guess.trim().parse() {
             Ok(num) => num,
             Err(_) => continue,
         };
