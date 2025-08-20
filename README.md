@@ -29,3 +29,7 @@
 - Floats are all Signed (either f32 or f64)
 
 - Booleans are well .. . true or false
+
+## COmpound Data Types
+- Tuple
+- Arrays

@@ -1,14 +1,16 @@
-use std::io;
+// use std::io;
 
 fn main(){
 
-    let mut name = String::new();
+    let tup :(u8, u8, u8, f32, f32) = (1, "3", "ewa", 0.4, -5);
 
-    io::stdin().read_line(&mut name).expect("failed to read line");
+    // let mut name = String::new();
 
-    if name == "caveman"{
-        println!("welcome {name}");
-    }
+    // io::stdin().read_line(&mut name).expect("failed to read line");
+
+    // if name == "caveman"{
+    //     println!("welcome {name}");
+    // }
     // let  x :u64 = 8;
     // // println!("x is equal to {x}");
 
