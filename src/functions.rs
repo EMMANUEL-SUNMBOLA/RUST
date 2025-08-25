@@ -4,10 +4,10 @@ use rand::Rng;
 fn main(){
 
     num_game();
-    find_month()
+    find_month();
 }
 
-fn find_month(){
+pub fn find_month(){
 
     let year = ["January", "February", "March", "April", "May", "June", "July","August", "September", "October", "November", "December"];
 
@@ -51,6 +51,12 @@ pub fn num_game(){
         }
     }
 
+    print!("it's all over noob");
 
+}
+
+pub fn square(x: i32){
+
+    println!("the square of {} is {}", x, x*x);
 
 }
