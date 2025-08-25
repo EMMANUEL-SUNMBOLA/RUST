@@ -1,10 +1,22 @@
-// use std::io;
+use std::io;
 
 fn main(){
 
-    let arr = [1, 2, 3, 4];
+    let arr = ["January", "February", "March", "April", "May", "June", "July","August", "September", "October", "November", "December"];
 
-    println!("first element in the array is {}, second element is {}, third element is {}, fourth element is {}", arr[0], arr[1], arr[2], arr[3])
+    let mut month = String::new();
+    println!("what month were you born in numbers - 1");
+
+    io::stdin().read_line(&mut month).expect("something wen't wrong");
+
+    let month: usize = month.trim().parse().expect("input wasn't a number");
+
+    let element = arr[month-1];
+
+
+    println!("{element}");
+
+    // println!("first element in the array is {}, second element is {}, third element is {}, fourth element is {}", arr[0], arr[1], arr[2], arr[3])
 
     // let tup  = (1, "3", "ewa", 0.4, -5);
     // let (x, y, z, a, b) = tup;

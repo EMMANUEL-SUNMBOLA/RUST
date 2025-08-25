@@ -34,13 +34,13 @@
 - Tuple
  to access Tuples you use .
  ``` RUST
-    Let Tup = (1, 2,"ewa", -5, 9.4)
-    
-    //OR
+        Let Tup = (1, 2,"ewa", -5, 9.4);
+        
+        //OR
 
-    Let Tup2 :(164, 132, str, u64, f32) = (1, 2,"ewa", -5, 9.4)
+        Let Tup2 :(164, 132, str, u64, f32) = (1, 2,"ewa", -5, 9.4);
 
-    println!("my name is {} ,  I am {} years old , my wallet balance is ${}", tup.2, tup.1, tup.4)
+        println!("my name is {} ,  I am {} years old , my wallet balance is ${}", tup.2, tup.1, tup.4);
  ```
 - Arrays
     to index Arrays we use []
@@ -56,4 +56,74 @@
         let year = ["January", "February", "March", "April", "May", "June", "July","August", "September", "October", "November", "December"]; 
 
         println!("I was born in {}", year[6]);
+
+        // another example
+
+            let arr = [1, 2, 3, 4];
+
+        println!("first element in the array is {}, second element is {}, third element is {}, fourth element is {}", arr[0], arr[1], arr[2], arr[3]);
+
+        // quick playject
+
+            let mut month = String::new();
+            println!("what month were you born in numbers ");
+
+            io::stdin().read_line(&mut month).expect("something wen't wrong");
+
+            let month: usize = month.trim().parse().expect("input wasn't a number");
+
+            let element = year[month-1];
+
+
+            println!("{element}");
     ```
+
+## Functions
+
+```RUST
+    fn find_month(){
+
+    let year = ["January", "February", "March", "April", "May", "June", "July","August", "September", "October", "November", "December"];
+
+    println!("input your month in number");
+
+    let mut input = String::new();
+
+    io::stdin().read_line(&mut input).expect("some shit happened");
+
+    let month :usize = input.trim().parse().expect("not an integer");
+
+    println!("your month is {}", year[month - 1]);
+
+}
+
+pub fn num_game(){   let secret = rand::thread_rng().gen_range(1..=100);
+
+    println!("secret number is {}", secret);
+
+    loop{
+        
+        let mut guess = String::new();
+    
+        println!("Enter your guess noob . . .");
+        
+        io::stdin().read_line(&mut guess).expect("trouble getting your guess");
+    
+        let guess:u32 = guess.trim().parse().expect("not a signed number");
+
+        println!("your guess is {guess}, so you guessed ");
+    
+        match guess.cmp(&secret){
+            Ordering::Less => println!("too small"),
+            Ordering::Greater => println!("too big"),
+            Ordering::Equal => {
+                println!("correctly 😀");
+                break; 
+            },
+        }
+    }
+
+
+
+}
+```

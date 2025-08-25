@@ -1,7 +1,12 @@
 use std::{cmp::Ordering, io};
 
 use rand::Rng;
+
+mod functions;
 fn main() {
+
+
+    functions::num_game();
 
     let secret = rand::thread_rng().gen_range(1..=100);
     
