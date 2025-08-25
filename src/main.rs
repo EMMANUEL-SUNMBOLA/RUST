@@ -1,14 +1,15 @@
-use std::{cmp::Ordering, io};
+// use std::{cmp::Ordering, io};
 
-use rand::Rng;
+// use rand::Rng;
 
 mod functions;
 fn main() {
 
 
-    functions::square(50);
-    functions::find_month();
-    functions::num_game();
+    functions::about(29, 7, 'black');
+    // functions::square(50);
+    // functions::find_month();
+    // functions::num_game();
 
     // let secret = rand::thread_rng().gen_range(1..=100);
     

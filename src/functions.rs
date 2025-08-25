@@ -3,8 +3,8 @@ use rand::Rng;
 
 fn main(){
 
-    num_game();
-    find_month();
+    // num_game();
+    // find_month()
 }
 
 pub fn find_month(){
@@ -20,6 +20,15 @@ pub fn find_month(){
     let month :usize = input.trim().parse().expect("not an integer");
 
     println!("your month is {}", year[month - 1]);
+
+}
+ 
+pub fn find_monthx(x :i32){
+
+    let year = ["January", "February", "March", "April", "May", "June", "July","August", "September", "October", "November", "December"];
+
+
+    println!("your month is {}", year[(x - 1) as usize]);
 
 }
 
@@ -58,5 +67,13 @@ pub fn num_game(){
 pub fn square(x: i32){
 
     println!("the square of {} is {}", x, x*x);
+
+}
+
+pub fn about(d: i32, m: i32, c: char){
+
+    let mth = find_monthx(m);
+
+    println!("you were born on the {d} of {m} and your fav color is {c}");
 
 }
