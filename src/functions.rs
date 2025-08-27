@@ -34,14 +34,7 @@ pub fn find_month(){
 
 }
  
-pub fn find_monthx(x :i32){
 
-    let year = ["January", "February", "March", "April", "May", "June", "July","August", "September", "October", "November", "December"];
-
-
-    println!("your month is {}", year[(x - 1) as usize]);
-
-}
 
 pub fn num_game(){
 
@@ -81,10 +74,21 @@ pub fn square(x: i32){
 
 }
 
+pub fn find_monthx(x :i32) -> &str{
+
+    let year = ["January", "February", "March", "April", "May", "June", "July","August", "September", "October", "November", "December"];
+
+
+    // println!("your month is {}", year[(x - 1) as usize]);
+
+    year[(x-1) as usize]
+
+}
+
 pub fn about(d: i32, m: i32, c: &str){
 
     let mth = find_monthx(m);
 
-    println!("you were born on the {d} of {m} and your fav color is {c}");
+    println!("you were born on the {} of {} and your fav color is {}", d, mth, c);
 
 }

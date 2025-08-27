@@ -7,6 +7,8 @@ fn main() {
 
 
     functions::less_five(300);
+
+    let x :i32= if 7 > 5 {7} else {5};
     functions::about(29, 7, "black");
     functions::square(50);
     functions::find_month();
