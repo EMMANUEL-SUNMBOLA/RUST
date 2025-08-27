@@ -70,7 +70,7 @@ pub fn square(x: i32){
 
 }
 
-pub fn about(d: i32, m: i32, c: char){
+pub fn about(d: i32, m: i32, c: &str){
 
     let mth = find_monthx(m);
 

@@ -129,9 +129,14 @@
 
             }
 
-            pub fn square(x: i32){
+            pub fn square(x: i32, c: char, d: &str){
+                // use char when expecting only 1 letter or character 
+                // use str when you're expecting more than 1 letter or character
 
                 println!("the square of {} is {}", x, x*x);
+                println!("the character of {} is {}", x, c);
+                println!("the string of {} is {}", x, d);
+
 
             }
 
