@@ -6,6 +6,7 @@ mod functions;
 fn main() {
 
 
+    functions::less_five(300);
     functions::about(29, 7, "black");
     functions::square(50);
     functions::find_month();

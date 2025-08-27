@@ -7,6 +7,17 @@ fn main(){
     // find_month()
 }
 
+pub fn less_five(x :i32){
+
+    if x > 5{
+        println!("your number is greater than 5");
+    }else{
+        println!("your number is either less than or equal to 5");
+    }
+
+
+}
+
 pub fn find_month(){
 
     let year = ["January", "February", "March", "April", "May", "June", "July","August", "September", "October", "November", "December"];

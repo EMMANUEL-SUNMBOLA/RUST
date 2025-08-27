@@ -130,8 +130,8 @@
             }
 
             pub fn square(x: i32, c: char, d: &str){
-                // use char when expecting only 1 letter or character 
-                // use str when you're expecting more than 1 letter or character
+                // use char when expecting only 1 letter or character || use single quotes for char ''
+                // use str when you're expecting more than 1 letter or character || use double quotes "" for strings 
 
                 println!("the square of {} is {}", x, x*x);
                 println!("the character of {} is {}", x, c);
@@ -140,5 +140,43 @@
 
             }
 
+
+```
+
+## Expressions, Statements, Conditionals
+
+- `Expressions` are codelines that return a value, they must not have semi colons
+
+```RUST
+        let x = {
+            let y = 6;
+            y + 1
+
+            // this is an expression because if you don'y add a semi colon it'll return a value
+        }
+```
+
+- `Statements` are codelines that do not return values, they end with semi colons
+
+```RUST
+    5+3;
+```
+
+- `Conditionals` the regular `if` and `else` 
+
+```RUST
+
+    fn less_five(x :i32){
+
+        if x = 0{
+            println!("x is equal to 0");
+        }else if x < 5{
+            // the condition must lead to a boolean data type
+            println!("x is less than 5");
+        }else{
+            println!("x is either greater than  or equal to 5");
+        }
+
+    }
 
 ```
