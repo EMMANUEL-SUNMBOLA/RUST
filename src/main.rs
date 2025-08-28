@@ -1,30 +1,69 @@
 // use std::{cmp::Ordering, io};
-use std::io;
+use std::io::{self, Read};
 
 // use rand::Rng;
 
 // mod functions;
-mod loops;
+// mod loops;
+mod functions;
 fn main() {
 
-    println!("what word would you like to print infinitely _ _ _");
+
+    println!("input your number in celcius");
 
     let mut x = String::new();
 
-    io::stdin().read_line(&mut x).expect("something went wrong");
+    io::stdin().read_line(&mut x).expect("something went wrong horribly");
 
-    let x = x.trim();
+    let x :i64= x.trim().parse().expect("input the right type of data");
 
-    println!("How many times would you love to loop the word _ _ _");
+    functions::toFahre(x);
 
-    let mut c = String::new();
+    // for num in (1..50).rev(){
+    //     println!("{num}");
+    // }
 
-    io::stdin().read_line(&mut c).expect("something went wrong");
+    // print!("Lift off");
 
-    let c :i32= c.trim().parse().expect("something went wrong");
+    // let year = ["January", "February", "March", "April", "May", "June", "July","August", "September", "October", "November", "December"];
+
+    // // let mut index = 0;
+    // print!("_");
+
+    // for month in year{
+
+    //     print!("_ {month} _");
+
+    // }
+
+    // print!("_");
 
 
-    loops::print_inf(x, c);
+    // while index < 12 {
+
+    //     println!("The no {} month is {}", (index + 1), year[index]);
+    //     index += 1;
+
+    // }
+
+    // println!("what word would you like to print infinitely _ _ _");
+
+    // let mut x = String::new();
+
+    // io::stdin().read_line(&mut x).expect("something went wrong");
+
+    // let x = x.trim();
+
+    // println!("How many times would you love to loop the word _ _ _");
+
+    // let mut c = String::new();
+
+    // io::stdin().read_line(&mut c).expect("something went wrong");
+
+    // let c :i32= c.trim().parse().expect("something went wrong");
+
+
+    // loops::print_inf(x, c);
 
     // functions::less_five(300);
 

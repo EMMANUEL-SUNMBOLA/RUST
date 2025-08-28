@@ -74,21 +74,31 @@ pub fn square(x: i32){
 
 }
 
-pub fn find_monthx(x :i32) -> &str{
+// pub fn find_monthx(x :i32) -> &str{
 
-    let year = ["January", "February", "March", "April", "May", "June", "July","August", "September", "October", "November", "December"];
+//     let year = ["January", "February", "March", "April", "May", "June", "July","August", "September", "October", "November", "December"];
 
 
-    // println!("your month is {}", year[(x - 1) as usize]);
+//     // println!("your month is {}", year[(x - 1) as usize]);
 
-    year[(x-1) as usize]
+//     year[(x-1) as usize]
+
+// }
+
+pub fn toFahre(x :i64){
+
+    println!("converting {} deg C to F", x);
+
+    let y = (x * 9)/5 + 32;
+
+    print!("{x} deg celcius is {y} deg Fahrenheit");
 
 }
 
-pub fn about(d: i32, m: i32, c: &str){
+// pub fn about(d: i32, m: i32, c: &str){
 
-    let mth = find_monthx(m);
+//     let mth = find_monthx(m);
 
-    println!("you were born on the {} of {} and your fav color is {}", d, mth, c);
+//     println!("you were born on the {} of {} and your fav color is {}", d, mth, c);
 
-}
+// }

@@ -180,3 +180,47 @@
     }
 
 ```
+
+## Loops
+
+- Loop
+
+    ```RUST
+    
+        fn inf_word(w :&str, c :i32){
+
+            let mut count = 0;
+            // it has to be mutable, so changable
+
+            'wordspam: loop{
+                
+                if count < c{
+
+                    println!("{} - {}", count, w);
+                    count += 1;
+
+                }else{
+
+                    break 'wordspam;
+
+                    // in RUST we can label loops to specify which loop to stop, incase of a nested loop
+
+                }
+
+            }
+
+        }
+
+    ```
+
+    - For Loop 
+
+    ``` RUST
+
+        let year = ["January", "February", "March", "April", "May", "June", "July","August", "September", "October", "November", "December"];
+
+        for month in year{
+            print!("{month}");
+        }
+
+    ```

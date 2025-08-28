@@ -2,6 +2,9 @@ fn main(){
 
 }
 
+
+
+
 pub fn print_inf(x :&str, c : i32){
 
     let mut count = 0;
