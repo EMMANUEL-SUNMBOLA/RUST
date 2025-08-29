@@ -85,14 +85,22 @@ pub fn square(x: i32){
 
 // }
 
-pub fn toFahre(x :i64){
+pub fn to_fahre(x :f64) -> f64{
 
     println!("converting {} deg C to F", x);
 
-    let y = (x * 9)/5 + 32;
+    let y: f64 = (x as f64 * 1.8) + 32.0;
 
-    print!("{x} deg celcius is {y} deg Fahrenheit");
+    y
+}
 
+pub fn to_celci(x :f64) -> f64{
+    
+    println!("converting {x} deg F to C");
+
+    let y: f64 = (x - 32.0)/1.8;
+
+    y
 }
 
 // pub fn about(d: i32, m: i32, c: &str){

@@ -9,15 +9,34 @@ mod functions;
 fn main() {
 
 
+
     println!("input your number in celcius");
 
     let mut x = String::new();
 
     io::stdin().read_line(&mut x).expect("something went wrong horribly");
 
-    let x :i64= x.trim().parse().expect("input the right type of data");
+    let x :f64= x.trim().parse().expect("input the right type of data");
 
-    functions::toFahre(x);
+    let y = functions::to_fahre(x);
+
+    println!("{x} deg celcius is {y} deg Fahrenheit");
+
+
+    // to celcius
+
+    println!("insert your temp in fahrenheit . . .");
+
+    let mut p: String = String::new();
+
+    io::stdin().read_line(&mut p).expect("something went wrong walai at input");
+
+    let p: f64 = p.trim().parse().expect("something went wrong walai at parse");
+
+    let q = functions::to_celci(p);
+
+    println!("your temp {p} deg F in C is {q}");
+
 
     // for num in (1..50).rev(){
     //     println!("{num}");
