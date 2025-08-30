@@ -223,4 +223,22 @@
             print!("{month}");
         }
 
+
+        for i in 1..10{
+            println!("caveman is the best");
+
+            // ranges from 1 - 9
+        }
+
+        for i in 1..=10{
+            println!("caveman is the best");
+            // ranges from 1 - 10
+        }
+
+    ```
+
+    - While loop
+
+    ```
+        
     ```
