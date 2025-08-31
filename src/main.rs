@@ -10,11 +10,20 @@ fn main() {
 
 
 
-    let mut s = String::from("hello");
 
-    s.push_str(", caveman");
+        let mut h = String::from("Opueh");
 
-    println!("{s}");
+        h = String::from("knew");
+
+        println!("he {} her", h);
+
+    // let mut s1 = String::from("hello");
+
+    // s1.push_str(", caveman");
+
+    // let s2 = s1;
+
+    // println!("{s1}");
    
    
     // println!("input your number in celcius");

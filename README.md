@@ -251,3 +251,19 @@
 ## Ownership 
 
 !!!OMO 
+
+- The rules of ownership to be followed strictly
+1. Each value in Rust has a variable that's called it's owner
+2. There can only be one owner at a time
+3. When the owner goes out of scope, the value will be dropped
+
+    ```RUST
+        {// s is not declared , so not valid
+
+            let s: &str = "cavemanxx";  // s is valid from here downward, s is a string literal and stored on the stack
+
+            let h String = String::from("cavemanxx"); // h is a string type
+
+            // use s to do stuffs
+        }// this scope of s is over and s is no longer valid
+    ```
