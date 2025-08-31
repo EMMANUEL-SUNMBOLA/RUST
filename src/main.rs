@@ -10,32 +10,39 @@ fn main() {
 
 
 
-    println!("input your number in celcius");
+    let mut s = String::from("hello");
 
-    let mut x = String::new();
+    s.push_str(", caveman");
 
-    io::stdin().read_line(&mut x).expect("something went wrong horribly");
+    println!("{s}");
+   
+   
+    // println!("input your number in celcius");
 
-    let x :f64= x.trim().parse().expect("input the right type of data");
+    // let mut x = String::new();
 
-    let y = functions::to_fahre(x);
+    // io::stdin().read_line(&mut x).expect("something went wrong horribly");
 
-    println!("{x} deg celcius is {y} deg Fahrenheit");
+    // let x :f64= x.trim().parse().expect("input the right type of data");
+
+    // let y = functions::to_fahre(x);
+
+    // println!("{x} deg celcius is {y} deg Fahrenheit");
 
 
-    // to celcius
+    // // to celcius
 
-    println!("insert your temp in fahrenheit . . .");
+    // println!("insert your temp in fahrenheit . . .");
 
-    let mut p: String = String::new();
+    // let mut p: String = String::new();
 
-    io::stdin().read_line(&mut p).expect("something went wrong walai at input");
+    // io::stdin().read_line(&mut p).expect("something went wrong walai at input");
 
-    let p: f64 = p.trim().parse().expect("something went wrong walai at parse");
+    // let p: f64 = p.trim().parse().expect("something went wrong walai at parse");
 
-    let q = functions::to_celci(p);
+    // let q = functions::to_celci(p);
 
-    println!("your temp {p} deg F in C is {q}");
+    // println!("your temp {p} deg F in C is {q}");
 
 
     // for num in (1..50).rev(){

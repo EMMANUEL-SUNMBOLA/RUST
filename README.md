@@ -239,6 +239,15 @@
 
     - While loop
 
+    ```RUST
+        let mut count: u64 = 0;
+        while count < 100{
+
+            println!("{} - caveman is the best", count);
+            count += 1;
+
+        }
     ```
-        
-    ```
+## Ownership 
+
+!!!OMO 
