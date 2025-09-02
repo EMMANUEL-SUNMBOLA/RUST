@@ -1,5 +1,6 @@
 // use std::{cmp::Ordering, io};
-use std::io::{self, Read};
+// use std::io::{self, Read};
+use bs58;
 
 // use rand::Rng;
 
@@ -10,12 +11,28 @@ fn main() {
 
 
 
+    let wallet = "GWn3ousvJY9mos6uW5a8VWDyVMoaH2CNX6XovwjpW9DE";
 
-        let mut h = String::from("Opueh");
+    let decoded = bs58::decode(wallet).into_vec().unwrap();
+    println!("wallet in 32 bytes is \n {:?} and Length in bytes: {}",decoded, decoded.len());
 
-        h = String::from("knew");
+    // let wallet = String::from("GWn3ousvJY9mos6uW5a8VWDyVMoaH2CNX6XovwjpW9DE");
 
-        println!("he {} her", h);
+
+
+    // for (i, ch) in wallet.chars().enumerate(){
+
+
+
+    //     println!("{} - {}", i+1, ch);
+
+    // }
+
+        // let mut h = String::from("Opueh");
+
+        // h = String::from("knew");
+
+        // println!("he {} her", h);
 
     // let mut s1 = String::from("hello");
 
