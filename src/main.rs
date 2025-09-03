@@ -10,11 +10,21 @@ mod functions;
 fn main() {
 
 
+    let gm = String::from("good morning");
+    let gw = "good morning";
 
-    let wallet = "GWn3ousvJY9mos6uW5a8VWDyVMoaH2CNX6XovwjpW9DE";
+    let s1 = &gm[..4];
+    // [0..4] = [..4];
+    let s2 = &gw[0..4];
 
-    let decoded = bs58::decode(wallet).into_vec().unwrap();
-    println!("wallet in 32 bytes is \n {:?} and Length in bytes: {}",decoded, decoded.len());
+
+    println!("{s1} \n\n {s2}");
+
+
+    // let wallet = "GWn3ousvJY9mos6uW5a8VWDyVMoaH2CNX6XovwjpW9DE";
+
+    // let decoded = bs58::decode(wallet).into_vec().unwrap();
+    // println!("wallet in 32 bytes is \n {:?} and Length in bytes: {}",decoded, decoded.len());
 
     // let wallet = String::from("GWn3ousvJY9mos6uW5a8VWDyVMoaH2CNX6XovwjpW9DE");
 
