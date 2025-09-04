@@ -269,12 +269,70 @@
     ```
 
 ## Struct 
-- structure (struct) are custom data types uded to group data, they're the object oriented form of RUST, A class
+- structure `struct` are custom data types uded to group data, they're the object oriented form of RUST, A class
 
     ```rust
+
+        // initialization of a struct
         struct user{
             name: String,
             age: u64,
             role: String,
+        }
+    ```
+
+-  usage of a `struct`
+
+    ```rust
+        struct User {
+            active: bool,
+            username: String,
+            email: String,
+            pwd: String,
+            sign_in_count: u64,
+        }
+
+        let caveman = User {
+            active: true,
+            username: String::from("caveman"),
+            email: String::from("cavemant@cave.com"),
+            pwd: String::from("1234"),
+            sign_in_count: 4,
+        };
+        
+        println!("\n my name is {}, I am always active -> {}, hit me up on {} let's work together", caveman.username, caveman.active, caveman.email);
+    ```
+
+- A function that creates a `struct`
+
+    ```rust
+        User = {
+            active: bool,
+            username: String,
+            email: String,
+            pwd: String,
+            age: u64,
+        }
+
+        fn create_user1(active: bool, username: String, email: String, pwd: String, age:u64) -> User{
+            User{
+                // in this function the though the key has the same name as the function parameters only the parameters are used
+                active: active,
+                username: username,
+                email: email,
+                pwd: pwd,
+                age: age,
+            }
+        }
+
+        fn create_user2(act: bool, name: String, gmail: String, pass: String, old:u64) -> User{
+            User{
+                // straight `foward`
+                active: act,
+                username: name,
+                email: gmail,
+                pwd: pass,
+                age: old,
+            }
         }
     ```
