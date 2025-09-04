@@ -10,15 +10,41 @@ mod functions;
 fn main() {
 
 
-    let gm = String::from("good morning");
-    let gw = "good morning";
 
-    let s1 = &gm[..4];
-    // [0..4] = [..4];
-    let s2 = &gw[0..4];
+    struct User {
+        active: bool,
+        username: String,
+        email: String,
+        pwd: String,
+        sign_in_count: u64,
+    }
+
+    let caveman = User {
+        active: true,
+        username: String::from("cavemanx"),
+        email: String::from("adedayoforgit@gmail.com"),
+        pwd: String::from("1234"),
+        sign_in_count: 4,
+    };
+    
 
 
-    println!("{s1} \n\n {s2}");
+    // let s = String::from("hello");
+    // let s = "hello";
+
+    // let s1 = s.as_bytes();
+
+    // print!("{s1}");
+
+    // let gm = String::from("good morning");
+    // let gw = "good morning";
+
+    // let s1 = &gm[..4];
+    // // [0..4] = [..4];
+    // let s2 = &gw[0..4];
+
+
+    // println!("{s1} \n\n {s2}");
 
 
     // let wallet = "GWn3ousvJY9mos6uW5a8VWDyVMoaH2CNX6XovwjpW9DE";

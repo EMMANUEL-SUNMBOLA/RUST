@@ -267,3 +267,14 @@
             // use s to do stuffs
         }// this scope of s is over and s is no longer valid
     ```
+
+## Struct 
+- structure (struct) are custom data types uded to group data, they're the object oriented form of RUST, A class
+
+    ```rust
+        struct user{
+            name: String,
+            age: u64,
+            role: String,
+        }
+    ```
