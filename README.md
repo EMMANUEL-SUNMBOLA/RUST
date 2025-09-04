@@ -8,7 +8,7 @@
         println!("You are {Age} years old");
 ```
 
-## Data Types in RUST
+### Data Types in RUST
 
 - Integers can be Signed [i8, i64, ...] and Unsigned [u8, u64, ...]
 - Signed integers can be either negative or positive and they range from
@@ -30,7 +30,7 @@
 
 - Booleans are well .. . true or false
 
-## Compound Data Types
+### Compound Data Types
 - Tuple
  to access Tuples you use .
  ``` RUST
@@ -78,7 +78,7 @@
             println!("{element}");
     ```
 
-## Functions
+### Functions
 
 ```RUST
             fn find_month(){
@@ -143,7 +143,7 @@
 
 ```
 
-## Expressions, Statements, Conditionals
+### Expressions, Statements, Conditionals
 
 - `Expressions` are codelines that return a value, they must not have semi colons
 
@@ -181,7 +181,7 @@
 
 ```
 
-## Loops
+### Loops
 
 - Loop
 
@@ -248,7 +248,7 @@
 
         }
     ```
-## Ownership 
+### Ownership 
 
 !!!OMO 
 
@@ -268,7 +268,7 @@
         }// this scope of s is over and s is no longer valid
     ```
 
-## Struct 
+### Struct 
 - structure `struct` are custom data types uded to group data, they're the object oriented form of RUST, A class
 
     ```rust
