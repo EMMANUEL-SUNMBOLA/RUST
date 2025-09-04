@@ -1,6 +1,7 @@
 // use std::{cmp::Ordering, io};
 // use std::io::{self, Read};
-use bs58;
+use std::io;
+// use bs58;
 
 // use rand::Rng;
 
@@ -8,8 +9,6 @@ use bs58;
 // mod loops;
 mod functions;
 fn main() {
-
-
 
     struct User {
         active: bool,
@@ -21,13 +20,42 @@ fn main() {
 
     let caveman = User {
         active: true,
-        username: String::from("cavemanx"),
+        username: String::from("caveman"),
         email: String::from("adedayoforgit@gmail.com"),
         pwd: String::from("1234"),
         sign_in_count: 4,
     };
     
+    println!("\n my name is {}, I am always active -> {}, hit me up on {} let's work together", caveman.username, caveman.active, caveman.email);
 
+
+    // script to fetch username and parse to String
+    println!("input your username  ");
+    let mut username = String::new();
+    io::stdin().read_line(&mut username).expect("something went wrong");
+    let username: String = username.trim().parse().expect("input a string");
+
+    // script to fetch email and parse to String
+    println!("input your email  ");
+    let mut email = String::new();
+    io::stdin().read_line(&mut email).expect("something went wrong");
+    let email: String = email.trim().parse().expect("input a string");
+
+    // script to fetch pwd and parse to String
+    println!("input your pwd  ");
+    let mut pwd = String::new();
+    io::stdin().read_line(&mut pwd).expect("something went wrong");
+    let pwd: String = pwd.trim().parse().expect("input a string");
+
+    // script to fetch age and parse to unsigned integer 64 bits
+    println!("input your age  ");
+    let mut age = String::new();
+    io::stdin().read_line(&mut age).expect("something went wrong");
+    let age: u64 = age.trim().parse().expect("input a u64 integer");
+
+    let caveman = functions::build_user1(username, email, pwd, age);
+
+    println!("\n \n hello {}, you've been registered as a {} year old, and we'll contact you at {}", caveman.username, caveman.age, caveman.email);
 
     // let s = String::from("hello");
     // let s = "hello";

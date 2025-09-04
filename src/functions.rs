@@ -1,78 +1,100 @@
-use std::{cmp::Ordering, io};
-use rand::Rng;
+// use std::{cmp::Ordering, io};
+// use rand::Rng;
 
-fn main(){
+pub struct User{
 
-    // num_game();
-    // find_month()
+    pub active: bool,
+    pub username: String,
+    pub email: String,
+    pub pwd: String,
+    pub age: u64,
+    
 }
 
-pub fn less_five(x :i32){
+pub fn build_user1(username: String, email: String, pwd: String, age: u64) -> User{
 
-    if x > 5{
-        println!("your number is greater than 5");
-    }else{
-        println!("your number is either less than or equal to 5");
+    User {
+        active: true,
+        username: username,
+        email: email,
+        pwd: pwd,
+        age: age,
     }
 
-
 }
 
-pub fn find_month(){
+// fn main(){
 
-    let year = ["January", "February", "March", "April", "May", "June", "July","August", "September", "October", "November", "December"];
+//     // num_game();
+//     // find_month()
+// }
 
-    println!("input your month in number");
+// pub fn less_five(x :i32){
 
-    let mut input = String::new();
+//     if x > 5{
+//         println!("your number is greater than 5");
+//     }else{
+//         println!("your number is either less than or equal to 5");
+//     }
 
-    io::stdin().read_line(&mut input).expect("some shit happened");
 
-    let month :usize = input.trim().parse().expect("not an integer");
+// }
 
-    println!("your month is {}", year[month - 1]);
+// pub fn find_month(){
 
-}
+//     let year = ["January", "February", "March", "April", "May", "June", "July","August", "September", "October", "November", "December"];
+
+//     println!("input your month in number");
+
+//     let mut input = String::new();
+
+//     io::stdin().read_line(&mut input).expect("some shit happened");
+
+//     let month :usize = input.trim().parse().expect("not an integer");
+
+//     println!("your month is {}", year[month - 1]);
+
+// }
  
 
 
-pub fn num_game(){
+// pub fn num_game(){
 
-    let secret = rand::thread_rng().gen_range(1..=100);
+//     let secret = rand::thread_rng().gen_range(1..=100);
 
-    println!("secret number is {}", secret);
+//     println!("secret number is {}", secret);
 
-    loop{
+//     loop{
         
-        let mut guess = String::new();
+//         let mut guess = String::new();
     
-        println!("Enter your guess noob . . .");
+//         println!("Enter your guess noob . . .");
         
-        io::stdin().read_line(&mut guess).expect("trouble getting your guess");
+//         io::stdin().read_line(&mut guess).expect("trouble getting your guess");
     
-        let guess:u32 = guess.trim().parse().expect("not a signed number");
+//         let guess:u32 = guess.trim().parse().expect("not a signed number");
 
-        println!("your guess is {guess}, so you guessed ");
+//         println!("your guess is {guess}, so you guessed ");
     
-        match guess.cmp(&secret){
-            Ordering::Less => println!("too small"),
-            Ordering::Greater => println!("too big"),
-            Ordering::Equal => {
-                println!("correctly 😀");
-                break; 
-            },
-        }
-    }
+//         match guess.cmp(&secret){
+//             Ordering::Less => println!("too small"),
+//             Ordering::Greater => println!("too big"),
+//             Ordering::Equal => {
+//                 println!("correctly 😀");
+//                 break; 
+//             },
+//         }
+//     }
 
-    print!("it's all over noob");
+//     print!("it's all over noob");
 
-}
+// }
 
-pub fn square(x: i32){
+// pub fn square(x: i32){
 
-    println!("the square of {} is {}", x, x*x);
+//     println!("the square of {} is {}", x, x*x);
 
-}
+// }
 
 // pub fn find_monthx(x :i32) -> &str{
 
@@ -85,23 +107,23 @@ pub fn square(x: i32){
 
 // }
 
-pub fn to_fahre(x :f64) -> f64{
+// pub fn to_fahre(x :f64) -> f64{
 
-    println!("converting {} deg C to F", x);
+//     println!("converting {} deg C to F", x);
 
-    let y: f64 = (x as f64 * 1.8) + 32.0;
+//     let y: f64 = (x as f64 * 1.8) + 32.0;
 
-    y
-}
+//     y
+// }
 
-pub fn to_celci(x :f64) -> f64{
+// pub fn to_celci(x :f64) -> f64{
     
-    println!("converting {x} deg F to C");
+//     println!("converting {x} deg F to C");
 
-    let y: f64 = (x - 32.0)/1.8;
+//     let y: f64 = (x - 32.0)/1.8;
 
-    y
-}
+//     y
+// }
 
 // pub fn about(d: i32, m: i32, c: &str){
 
